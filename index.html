@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Color Scheme Generator</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="index.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <form id="color-picker">
+        <input type="color" value="#F55A5A" id="eye-dropper" />
+
+        <select id="select-menu">
+          <option value="monochrome">Monochrome</option>
+          <option value="monochrome-dark">Monochrome-dark</option>
+          <option value="monochrome-light">Monochrome-light</option>
+          <option value="analogic">Analogic</option>
+          <option value="complement">Complement</option>
+          <option value="analogic-complement">Analogic-complement</option>
+          <option value="triad">Triad</option>
+        </select>
+
+        <button type="submit" id="btn-color-picker">Get color scheme</button>
+      </form>
+    </header>
+
+    <main>
+      <div id="colors-result">
+        <p>Your color palette will appear here!</p>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>

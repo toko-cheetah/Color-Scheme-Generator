@@ -1,0 +1,148 @@
+html {
+  margin: 0;
+  padding: 0;
+  background: #131922;
+}
+
+body {
+  width: 550px;
+  height: 550px;
+  margin: 0 auto;
+  background: #1f2937;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+#color-picker {
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#eye-dropper,
+#select-menu,
+#btn-color-picker {
+  height: 42px;
+}
+
+#eye-dropper,
+#btn-color-picker {
+  border: none;
+}
+
+#eye-dropper {
+  width: 61px;
+  background: #e5e5e5;
+}
+
+#select-menu {
+  width: 312px;
+  background: #1f293a;
+  color: #d5d4d8;
+  font-size: 1rem;
+  padding: 9px 13px;
+  margin: 0 9px;
+  box-sizing: border-box;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: url(./img/down-arrow-icon.png);
+  background-repeat: no-repeat;
+  background-position: right 13px center;
+}
+
+#btn-color-picker {
+  width: 123px;
+  background: #3d4b60;
+  border-radius: 4px;
+  margin: 0;
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.75rem;
+}
+
+#eye-dropper:hover,
+#select-menu:hover,
+#btn-color-picker:hover,
+#colors-result > div:hover {
+  cursor: pointer;
+}
+
+#btn-color-picker:hover {
+  background: #495a73;
+}
+
+main {
+  height: calc(100% - 90px);
+}
+
+#colors-result,
+#colors-result > div,
+.hex {
+  display: flex;
+}
+
+#colors-result {
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+#colors-result > p {
+  margin: 20% 7%;
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+#colors-result > div {
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.hex,
+.copied-hex {
+  font-weight: 500;
+  font-size: 0.75rem;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.hex {
+  background: #1f2937;
+  width: 100%;
+  height: 10%;
+  justify-content: center;
+  align-items: center;
+  color: #d5d4d8;
+}
+
+.copied-hex {
+  background: black;
+  width: 80%;
+  margin: 10px 0;
+  border-radius: 7px;
+  text-align: center;
+  visibility: hidden;
+}
+
+@keyframes disappear {
+  from {
+    visibility: visible;
+    opacity: 0.7;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
